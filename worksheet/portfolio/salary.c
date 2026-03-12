@@ -14,15 +14,11 @@ int main(void) {
     float taxrate = 15;
 
     // calculate the deductions and final take-home salary
-    float perc1 = NI / 100;
-    float NICont = salary * perc1;
+    float NICont = salary * NI / 100;
+    float TaxCont = salary * taxrate / 100;
+    float homesalary = salary - NICont - TaxCont;
 
-    float perc2 = taxrate / 100;
-    float TaxCont = salary * perc2;
-
-    float homesalary = salary - TaxCont - NICont;
-
-    // print results
+    // Use only these print statement with appropriate formatting and variable names
     printf("Salary £%.2f\n", salary);
     printf("NI contribution £%.2f\n", NICont);
     printf("Tax contribution £%.2f\n", TaxCont);
