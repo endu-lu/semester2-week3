@@ -1,4 +1,3 @@
-
 ## Compilation activities
 
 You are given the source code file: hello.c
