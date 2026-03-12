@@ -15,8 +15,10 @@ int main(void) {
 
     // calculate the deductions and final take-home salary
     float NICont = salary * NI / 100;
-    float TaxCont = salary * taxrate / 100;
-    float homesalary = salary - NICont - TaxCont;
+    float remainingSalary = salary - NICont;
+    float taxableAmount = remainingSalary - 12500;
+    float TaxCont = taxableAmount * taxrate / 100;
+    float homesalary = remainingSalary - TaxCont;
 
     // Use only these print statement with appropriate formatting and variable names
     printf("Salary £%.2f\n", salary);
